@@ -21,52 +21,76 @@
     <title>Frontend Mentor | FAQ accordion</title>
   </head>
   <body
-    class="flex flex-col items-center min-h-svh bg-body-background text-primary-dark font-primary"
+    class="flex flex-col items-center gap-8 min-h-svh bg-body-background text-primary-dark font-primary"
   >
-    <div
-      class="border border-red-500 grow *:border *:border-amber-500 grid grid-rows-[1fr_1fr_auto] grid-cols-1"
-    >
-      <picture class="row-span-2 row-start-1">
+    <div class="grid grid-cols-1 grid-rows-[100px_100px_1fr] w-full">
+      <picture
+        class="relative w-full col-start-1 col-end-2 row-span-2 row-start-1"
+      >
         <source
-          media="(min-width: 768px)"
+          media="(min-width: 48rem)"
           srcset="./assets/images/background-pattern-desktop.svg"
         />
         <img
           src="./assets/images/background-pattern-mobile.svg"
           alt=""
-          class="w-full"
+          class="object-cover w-full h-full"
         />
       </picture>
-      <main class="row-span-2 row-start-2">
-        <div>
-          <h1>Frontend Mentor</h1>
-          <h2>
-            <span><img src="./assets/images/icon-star.svg" alt="" /></span>
-            <span><abbr title="Frequently Asked Questions">FAQs</abbr></span>
+      <main
+        class="relative z-10 grid w-full col-start-1 col-end-2 row-span-2 row-start-2 p-4 place-items-center"
+      >
+        <div
+          class="flex flex-col w-full max-w-2xl gap-12 p-4 pb-8 m-auto shadow-lg rounded-2xl sm:p-8 bg-primary-white"
+        >
+          <h1 class="sr-only">Frontend Mentor</h1>
+          <h2 class="flex items-center gap-4 mt-4 font-bold">
+            <span
+              ><img
+                src="./assets/images/icon-star.svg"
+                alt=""
+                class="inline-block w-8 h-8"
+            /></span>
+            <span class="text-4xl font-bold"
+              ><abbr title="Frequently Asked Questions" class="no-underline"
+                >FAQs</abbr
+              ></span
+            >
           </h2>
 
-          <ul>
-            <li>
+          <ul class="flex flex-col w-full gap-6 overflow-hidden">
+            <li class="flex flex-col gap-2">
               <h3>
                 <button
                   type="button"
-                  aria-expanded="true"
-                  class="accordion__button"
+                  aria-expanded="false"
+                  class="flex items-center justify-between w-full font-bold text-left cursor-pointer group outline-active-state accordion__button"
                   aria-controls="panel1"
                   id="button-1"
                 >
                   <span
-                    >FAQs What is Frontend Mentor, and how will it help
-                    me?</span
+                    class="group-hover:text-active-state group-active:text-active-state group-focus:text-active-state"
+                    >What is Frontend Mentor, and how will it help me?</span
                   >
-                  <span
-                    ><img src="./assets/images/icon-plus.svg" alt="" />
-                    <img src="./assets/images/icon-minus.svg" alt=""
+                  <span class="shrink-0"
+                    ><img
+                      src="./assets/images/icon-plus.svg"
+                      alt=""
+                      class="block w-12 h-12 group-aria-expanded:hidden" />
+                    <img
+                      src="./assets/images/icon-minus.svg"
+                      alt=""
+                      class="hidden group-aria-expanded:w-12 group-aria-expanded:h-12 group-aria-expanded:block"
                   /></span>
                 </button>
               </h3>
-              <div aria-labelledby="button-1" id="panel1">
-                <p>
+              <div
+                aria-labelledby="button-1"
+                id="panel1"
+                aria-hidden="true"
+                class="pt-2 ml-0 transition-all duration-1000 opacity-100 aria-hidden:hidden starting:opacity-0 starting:-ml-36"
+              >
+                <p class="">
                   Frontend Mentor offers realistic coding challenges to help
                   developers improve their frontend coding skills with projects
                   in HTML, CSS, and JavaScript. It's suitable for all levels and
@@ -75,23 +99,37 @@
               </div>
             </li>
 
-            <li>
+            <li class="flex flex-col gap-2 pt-4 border-t border-t-border/20">
               <h3>
                 <button
                   type="button"
                   aria-expanded="false"
-                  class="accordion__button"
+                  class="flex items-center justify-between w-full font-bold text-left cursor-pointer group outline-active-state accordion__button"
                   aria-controls="panel2"
                   id="button-2"
                 >
-                  <span>Is Frontend Mentor free?</span>
                   <span
-                    ><img src="./assets/images/icon-plus.svg" alt="" />
-                    <img src="./assets/images/icon-minus.svg" alt=""
+                    class="group-hover:text-active-state group-active:text-active-state group-focus:text-active-state"
+                    >Is Frontend Mentor free?</span
+                  >
+                  <span class="shrink-0"
+                    ><img
+                      src="./assets/images/icon-plus.svg"
+                      alt=""
+                      class="block w-12 h-12 group-aria-expanded:hidden" />
+                    <img
+                      src="./assets/images/icon-minus.svg"
+                      alt=""
+                      class="hidden group-aria-expanded:w-12 group-aria-expanded:h-12 group-aria-expanded:block"
                   /></span>
                 </button>
               </h3>
-              <div aria-labelledby="button-2" id="panel2">
+              <div
+                aria-labelledby="button-2"
+                id="panel2"
+                aria-hidden="true"
+                class="pt-2 ml-0 transition-all duration-1000 opacity-100 aria-hidden:hidden starting:opacity-0 starting:-ml-36"
+              >
                 <p>
                   Yes, Frontend Mentor offers both free and premium coding
                   challenges, with the free option providing access to a range
@@ -100,25 +138,39 @@
               </div>
             </li>
 
-            <li>
+            <li class="flex flex-col gap-2 pt-4 border-t border-t-border/20">
               <h3>
                 <button
                   type="button"
                   aria-expanded="false"
-                  class="accordion__button"
+                  class="flex items-center justify-between w-full font-bold text-left cursor-pointer group outline-active-state accordion__button"
                   aria-controls="panel3"
                   id="button-3"
                 >
                   <span
+                    class="group-hover:text-active-state group-active:text-active-state group-focus:text-active-state"
                     >Can I use Frontend Mentor projects in my portfolio?</span
                   >
-                  <span>
-                    <img src="./assets/images/icon-plus.svg" alt="" />
-                    <img src="./assets/images/icon-minus.svg" alt="" />
+                  <span class="shrink-0">
+                    <img
+                      src="./assets/images/icon-plus.svg"
+                      alt=""
+                      class="block w-12 h-12 group-aria-expanded:hidden"
+                    />
+                    <img
+                      src="./assets/images/icon-minus.svg"
+                      alt=""
+                      class="hidden group-aria-expanded:w-12 group-aria-expanded:h-12 group-aria-expanded:block"
+                    />
                   </span>
                 </button>
               </h3>
-              <div aria-labelledby="button-3" id="panel3">
+              <div
+                aria-labelledby="button-3"
+                id="panel3"
+                aria-hidden="true"
+                class="pt-2 ml-0 transition-all duration-1000 opacity-100 aria-hidden:hidden starting:opacity-0 starting:-ml-36"
+              >
                 <p>
                   Yes, you can use projects completed on Frontend Mentor in your
                   portfolio. It's an excellent way to showcase your skills to
@@ -127,26 +179,40 @@
               </div>
             </li>
 
-            <li>
+            <li class="flex flex-col gap-2 pt-4 border-t border-t-border/20">
               <h3>
                 <button
                   type="button"
                   aria-expanded="false"
-                  class="accordion__button"
+                  class="flex items-center justify-between w-full font-bold text-left cursor-pointer group outline-active-state accordion__button"
                   aria-controls="panel4"
                   id="button-4"
                 >
                   <span
+                    class="group-hover:text-active-state group-active:text-active-state group-focus:text-active-state"
                     >How can I get help if I'm stuck on a Frontend Mentor
                     challenge?</span
                   >
-                  <span>
-                    <img src="./assets/images/icon-minus.svg" alt="" />
-                    <img src="./assets/images/icon-plus.svg" alt="" />
+                  <span class="shrink-0">
+                    <img
+                      src="./assets/images/icon-minus.svg"
+                      alt=""
+                      class="hidden group-aria-expanded:w-12 group-aria-expanded:h-12 group-aria-expanded:block"
+                    />
+                    <img
+                      src="./assets/images/icon-plus.svg"
+                      alt=""
+                      class="block w-12 h-12 group-aria-expanded:hidden"
+                    />
                   </span>
                 </button>
               </h3>
-              <div aria-labelledby="button-4" id="panel4">
+              <div
+                aria-labelledby="button-4"
+                id="panel4"
+                aria-hidden="true"
+                class="pt-2 ml-0 transition-all duration-1000 opacity-100 aria-hidden:hidden starting:opacity-0 starting:-ml-36"
+              >
                 <p>
                   The best place to get help is inside Frontend Mentor's Discord
                   community. There's a help channel where you can ask questions
@@ -159,14 +225,25 @@
       </main>
     </div>
     <footer class="mt-auto">
-      <div>
+      <div class="max-w-2xl px-4 m-auto text-sm text-center">
         <p>
           Challenge by
-          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          <a
+            href="https://www.frontendmentor.io?ref=challenge"
+            target="_blank"
+            class="underline text-active-state hover:no-underline"
             >Frontend Mentor</a
-          >. Coded by <a href="#">Your Name Here</a>.
+          >. Coded by
+          <a
+            href="https://github.com/repro123"
+            target="_blank"
+            class="underline text-active-state hover:no-underline"
+            >Bello Ibrahim</a
+          >.
         </p>
       </div>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>

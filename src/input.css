@@ -6,7 +6,8 @@
   /* colors */
   --color-primary-white: hsl(0, 0%, 100%);
   --color-body-background: hsl(275, 100%, 97%);
-  --color-active-state: hsl(292, 16%, 49%);
+  --color-border: hsl(292, 16%, 49%);
+  --color-active-state: hsl(281, 83%, 54%);
   --color-primary-dark: hsl(292, 42%, 14%);
 
   /* font  */
