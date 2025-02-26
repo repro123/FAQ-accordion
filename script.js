@@ -13,7 +13,7 @@ for (let i = 0; i < accordionBtn.length; i++) {
     console.log(isAriaExpanded); // isAriaExpanded is false
     button.setAttribute("aria-expanded", !isAriaExpanded);
 
-    // to get the id of each content. i gave them different id's, so the only way to select them all is by selecting the aria-controls attribute of the buttons
+    // to get the id of each content. i gave  them different id's, so the only way to select them all is by selecting the aria-controls attribute of the buttons
     const accordionContentId = button.getAttribute("aria-controls");
     console.log(accordionContentId); //should give the id of each accordion content div
 
